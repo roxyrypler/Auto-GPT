@@ -1,0 +1,15 @@
+{
+  "name": "autogpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker": "docker-compose run --rm auto-gpt",
+    "bind": "docker exec -t -i autogpt_redis_1 /bin/bash",
+    "dockerlist": "docker ps",
+    "customMount": "docker run --rm -it --name auto-gpt --env-file=.env -v $PWD/stuff:/app/autogpt/auto_gpt_workspace -v $PWD/plugins:/app/plugins auto-gpt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
