@@ -1,15 +1,25 @@
 {
   "name": "autogpt",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![Official Website](https://img.shields.io/badge/Official%20Website-agpt.co-blue?style=flat&logo=world&logoColor=white)](https://agpt.co)\r [![Unit Tests](https://img.shields.io/github/actions/workflow/status/Significant-Gravitas/Auto-GPT/ci.yml?label=unit%20tests)](https://github.com/Significant-Gravitas/Auto-GPT/actions/workflows/ci.yml)\r [![Discord Follow](https://dcbadge.vercel.app/api/server/autogpt?style=flat)](https://discord.gg/autogpt)\r [![GitHub Repo stars](https://img.shields.io/github/stars/Significant-Gravitas/auto-gpt?style=social)](https://github.com/Significant-Gravitas/Auto-GPT/stargazers)\r [![Twitter Follow](https://img.shields.io/twitter/follow/siggravitas?style=social)](https://twitter.com/SigGravitas)",
   "main": "index.js",
   "scripts": {
-    "docker": "docker-compose run --rm auto-gpt",
-    "bind": "docker exec -t -i autogpt_redis_1 /bin/bash",
-    "dockerlist": "docker ps",
-    "customMount": "docker run --rm -it --name auto-gpt --env-file=.env -v $PWD/stuff:/app/autogpt/auto_gpt_workspace -v $PWD/plugins:/app/plugins auto-gpt"
+    "speak": "python -m autogpt --speak",
+    "ai": "python -m autogpt"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roxyrypler/Auto-GPT.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roxyrypler/Auto-GPT/issues"
+  },
+  "homepage": "https://github.com/roxyrypler/Auto-GPT#readme"
 }
